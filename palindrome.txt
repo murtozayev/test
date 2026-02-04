@@ -1,0 +1,76 @@
+// Kotlin
+class Solution {
+    fun isPalindrome(x: Int): Boolean {
+        if (x < 0) return false
+
+        val str = x.toString()
+        // Stringni teskarisiga o'girish
+        val reversed = str.reversed()
+
+        return str == reversed
+    }
+}
+
+// Python
+def isPalindrome(x):
+    if x < 0 or (x % 10 == 0 and x != 0):
+        return False
+        
+    reversed_num = 0
+    temp = x
+    while temp > 0:
+        reversed_num = (reversed_num * 10) + (temp % 10)
+        temp //= 10
+        
+    return x == reversed_num
+
+// Java
+class Solution {
+    public boolean isPalindrome(int x) {
+        // Manfiy sonlar va 0 bilan tugaydigan (lekin 0 ning o'zi bo'lmagan) sonlar palindrom emas
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+
+        int reversedNumber = 0;
+        int original = x;
+
+        while (x > 0) {
+            int lastDigit = x % 10;
+            reversedNumber = reversedNumber * 10 + lastDigit;
+            x = x / 10;
+        }
+
+        return original == reversedNumber;
+    }
+}
+
+// Go
+func isPalindrome(x int) bool {
+    // Manfiy sonlar palindrom emas
+    if x < 0 || (x % 10 == 0 && x != 0) {
+        return false
+    }
+
+    reversedNumber := 0
+    original := x
+
+    for x > 0 {
+        lastDigit := x % 10
+        reversedNumber = reversedNumber * 10 + lastDigit
+        x = x / 10
+    }
+
+    return original == reversedNumber
+}
+
+// Javascript
+function isPalindrome(x) {
+    // Manfiy sonlar palindrom bo'la olmaydi
+    if (x < 0) return false;
+
+    let str = String(x);
+    let reversedStr = str.split("").reverse().join("");
+    
+    return str === reversedStr;
+}
