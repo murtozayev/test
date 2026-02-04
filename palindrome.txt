@@ -27,7 +27,6 @@ def isPalindrome(x):
 // Java
 class Solution {
     public boolean isPalindrome(int x) {
-        // Manfiy sonlar va 0 bilan tugaydigan (lekin 0 ning o'zi bo'lmagan) sonlar palindrom emas
         if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;
         }
@@ -47,7 +46,6 @@ class Solution {
 
 // Go
 func isPalindrome(x int) bool {
-    // Manfiy sonlar palindrom emas
     if x < 0 || (x % 10 == 0 && x != 0) {
         return false
     }
@@ -66,7 +64,6 @@ func isPalindrome(x int) bool {
 
 // Javascript
 function isPalindrome(x) {
-    // Manfiy sonlar palindrom bo'la olmaydi
     if (x < 0) return false;
 
     let str = String(x);
