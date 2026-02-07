@@ -1,0 +1,145 @@
+Stringlar
+Birinchi harfni olish
+_______________________________Java_______________________________
+string.charAt(0)
+_______________________________Kotlin_______________________________
+string[0]
+_______________________________Go_______________________________
+string[0]
+_______________________________Python_______________________________
+string[0]
+
+
+
+Oxirgi harfni olish
+
+
+
+_______________________________Java_______________________________
+string.charAt(string.length()-1)
+
+_______________________________Go_______________________________
+string[len(string) - 1]
+
+_______________________________Kotlin_______________________________
+string.last()
+
+_______________________________Python_______________________________
+string[-1]
+
+
+
+Substring
+_______________________________Python_______________________________
+string[1:4] // Birinchi indexdan to'rtinchi indexgacha kesilsin
+
+_______________________________Java_______________________________
+string.substring(1, 4)
+
+_______________________________Kotlin_______________________________
+string.substring(1, 4)
+
+_______________________________Go_______________________________
+string[1:4] //// Birinchi indexdan to'rtinchi indexgacha kesilsin
+
+
+
+Oxiridan kesish
+_______________________________Python_______________________________
+string[:-1] //Oxiridan bir harf kesilsin
+
+_______________________________Java_______________________________
+string.substring(0, string.length()-1);
+
+_______________________________Kotlin_______________________________
+string.dropLast(1)
+
+_______________________________Go_______________________________
+string[:len(string) - 1]
+
+
+Looplar for va while
+_______________________________Python_______________________________
+for i in range(from, to):
+for item in items
+while x > 0
+
+_______________________________Java_______________________________
+for(int i = 0; i < int; i++)
+for(Var i : items)
+while(x > y);
+
+_______________________________Kotlin_______________________________
+for(i in 1 until 10) {}
+for(item in items) {}
+while(x > y) {}
+
+_______________________________Go_______________________________
+for i:=0; i < 12; i++ {}
+for x < 10 {} while o'rnini bosadi
+for index, value := range items {}
+
+Lambda yani callback functions
+
+_______________________________Python_______________________________
+lambda x: x * 2
+
+_______________________________Java_______________________________
+(x) -> x * 2
+
+_______________________________Kotlin_______________________________
+{it * 2}
+
+_______________________________Go_______________________________
+func(x int ) int {return x * 2}
+
+
+
+Map filter ishlatilishi
+
+_______________________________Python_______________________________
+res = [x**2 for x in num if x % 2 == 0]
+
+_______________________________Kotlin_______________________________
+val res = nums.filter {it % 2 == 0}.map {it * it}
+
+_______________________________Java_______________________________
+List<Integer> res = nums.stream()
+    .filter(x -> x % 2 == 0)
+    .map(x -> x * x)
+    .collect(Collectors.toList())
+
+
+
+// List and Map
+
+_______________________________Python_______________________________
+employee = [
+    {
+        "name": "Anna",
+        "age": 22
+    }
+]
+
+_______________________________Kotlin_______________________________
+val employee = mutableListOf(
+    mapOf(
+        "name" to "Ali"
+        "age" to 20
+    )
+)
+
+_______________________________Java_______________________________
+List<Map<String, Object>> employees = new ArrayList<>();
+Map<String, Object> emp1 = new HashMap<>();
+emp1.put("name", "Ali");
+emp1.put("age", 22);
+employees.add(emp1);
+
+_______________________________Go_______________________________
+employees := []map[string] interface{}{
+    {
+        "name" : "Ali",
+        "salary" : 1000,
+    }
+}
