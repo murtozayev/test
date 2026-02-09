@@ -1,0 +1,260 @@
+--------------------------Raqamlar--------------------------------
+
+Number int float==================================================
+Bu data type javada int yoki double bilan belgilanadi agar raqamlar uzun bo'lsa Float double ning o'rniga long esa intning o'rniga ishlatiladi
+
+double num1 = 12.21;
+float num = 21.12k;
+int num2 = 3232;
+long num3 = 1213456363634
+
+Kotlinda esa
+Int Long, Double Float
+
+val num1: Int = 12
+val double: Double = 12.2
+    
+Pythonda esa shunchaki int va float
+num = int(232)
+num3 = float(32)
+
+goda esa maxsus
+int va int64, float va float64
+
+var num int = 213
+var floatNum float32 = 12.2;
+
+--------------------------Raqamlar--------------------------------
+
+--------------------------Booleanlar------------------------------
+Javada har qaysi variable data type ila chaqiriladi==============
+
+boolean isStudent = false or true
+
+Boshqa tillarda esa shunchaki oxiriga true yoki false qo'yiladi
+
+Kotlin
+val ok = true
+
+Python
+ok = True
+
+Go
+ok := true
+
+--------------------------Booleanlar------------------------------
+
+--------------------------Char va Stringlar------------------------------
+Charlar bular harf va belgilarning maxsus darajasini beruvchi kodlardir
+String esa matnlardir
+
+Charlar va Stringlar javada variable si bilan chaqiriladi va char uchun '' string uchun esa "" shu belgilar ishlatiladi==================================================
+
+Java
+char c = 'A';
+String name = "Jahongir";
+
+Qolgan dasturlash tilida esa shunchaki o'zgaruvchiga mos stringlar va charlar yoziladi=
+
+Kotlin
+val char: Char = 'A';
+val str: String = "Jahongir"
+
+Go
+Go da charlar hammasi rune bilan belgilanadi=====================================
+var c rune = 'A';
+var s string = "string"
+
+Pythonda esa faqat string
+name = str("Jahongir")
+
+--------------------------Char va Stringlar------------------------------
+
+--------------------------Stringlar deep core----------------------------
+Stringlar bu matn va diktantlardir=======================================
+Stringlarning uzunligi yani lengthni olish yo'llari
+
+Javada
+str.length()
+
+Pythonda
+len(str)
+
+Kotlinda
+str.length
+
+Go da
+len(str)
+
+Slice va substringlar===============================================
+
+Java dasturlash tilida stringni kesib olishni substring bilan bajarish uchun
+String s = "   Hello World    ";
+String newStr = s.substring(2,6);
+
+Kotlinda
+
+val str: String = "Hello World";
+val newStr: String = str.substring(1,5)
+
+Python va GO'da esa undan ham oqqiyroq syntax==========================
+Python
+string = "Hello World"
+newStr = string[0:5]
+
+Go
+str := "Hello World";
+newStr := str[0:5];
+
+Stringlarni izlash=====================================================
+Javada
+String s = "   Hello World    ";
+Boolean foundStr = s.contains("Hello"); // Mavjud bo'lsa true aks holda false
+
+Kotlin
+val str: String = "Hello World";
+val foundString: Boolean = str.contains("Hello");
+
+Python
+string = "Hello World"
+print("Hello" in string)
+
+Go
+Bu yerda strings kutubxonasi alohida import qilinadi
+import "strings"
+str := "Hello World"
+foundString := strings.Contains(str, "Hello");
+
+startsWith EndWith ====================================================
+bu methodlar string nima bilan tugaganini tekshirish uchundir va u boolean qaytaradi
+
+Javada
+String s = "   Hello World    ";
+System.out.println(s.startsWith("a")); // False
+System.out.println(s.endsWith("d")); // False
+
+
+Kotlinda
+val str:String = "Hello World";
+println(str.startsWith("H")) // True
+println(str.endsWith("d")) // True
+
+Pythonda
+string = "Hello World"
+print(string.endswith("He")) // False
+print(string.startswith("He")) // True
+
+Go
+str := "Hello World"
+println(strings.HasPrefix(str, "He")) // startsWith true
+println(strings.HasSuffix(str, "ld")) // endsWith true
+
+
+indexOf va find methodlari =============================================
+bular hammasi kerakli string charlarini izlash uchun xizmat qiladi
+find - topilgan stringni qaytaradi
+indexOf esa o'sha stringing indexini qaytaradi
+
+Java
+String s = "   Hello World    ";
+Integer foundString = s.indexOf("H"); // 3
+
+Kotlin
+val str: String = "Hello World";
+val foundIndex: Int = str.indexOf("H"); // 0
+
+Python
+string = "Hello World"
+print(string.find("l")) // 2
+
+Go
+str:="Hello World"
+foundIndex:= strings.Index(str, "0") // -1
+
+Split va join ======================================================
+
+split stringni listga
+join esa listni stringga aylantiradi
+
+Java
+String s = "Hello World";
+String[] strs = s.split("");
+String rejoin = String.join(",", strs);
+
+Kotlin
+val str: String = "Hello World";
+val strToList: List<String> = str.split("");
+val listToStr: String = strToList.joinToString(",")
+
+Python
+string = "Hello World"
+lists = string.split(" ")
+str2 = str.join(" ", lists)
+
+Go
+str := "Hello World"
+strToList := strings.Split(str, "")
+listToStr := strings.Join(strToList, "")
+
+Replace=================================================================
+replace bu o'rin almashtirish
+
+Java
+String s = "Hello World";
+String str = s.replace("World", "Everyone");
+
+Kotlin
+val str: String = "Hello World";
+val changed: String = str.replace("World", "Eveyone");  
+
+Python
+string = "Hello World"
+print(string.replace("World", "Everyone"))
+
+Go
+str := "Hello World"
+replacedStr := strings.ReplaceAll(str, "World", "Everyone");
+
+Trim ==========================================================
+trim bu stringni tuzatishdir ortiqcha spacelarni kesish
+
+Java
+String s = "           Hello World            ";
+System.out.println(s.trim()); // Hello World
+
+Kotlin
+val str: String = "     Hello World          ";
+print(str.trim()) // Hello World
+
+Python
+string = "   Hello World    "
+print(string.strip()) // Hello World
+
+Go
+str := "     Hello World       "
+println(strings.TrimSpace(str))
+
+Lowercase Uppercase
+yani harfni kichraytirish va kattartirish
+
+Java
+String s = "hello World";
+System.out.println(s.toUpperCase()); // HELLO WORLD
+System.out.println(s.toLowerCase()); // hello world
+
+Kotlin
+val str: String = "hello World";
+print(str.uppercase())
+print(str.lowercase())
+
+Python
+string = "Hello World"
+print(string.upper())
+print(string.lower()
+
+Go
+str := "Hello World"
+println(strings.ToUpper(str))
+println(strings.ToLower(str))
+
+--------------------------Stringlar deep core----------------------------

@@ -1,0 +1,46 @@
+// Kotlin
+class Solution {
+    fun isValid(s: String): Boolean {
+        val stack = ArrayDeque<Char>()
+
+        for(c in s) {
+            when(c) {
+                '(', '{', '[' -> stack.addFirst(c)
+                ')' -> if(stack.isEmpty() || stack.removeFirst() != '(') return false
+                '}' -> if(stack.isEmpty() || stack.removeFirst() != '{') return false
+                ']' -> if(stack.isEmpty() || stack.removeFirst() != '[') return false
+            }
+        }
+
+        return stack.isEmpty()
+    }
+}
+
+// Javascript
+var isValid = function(s) {
+    let stack = [];
+
+    for (let c of s) {
+        switch (c) {
+            case "(":
+            case "{":
+            case "[":
+                stack.push(c);
+                break;
+
+            case ")":
+                if (stack.pop() !== "(") return false;
+                break;
+            case "}":
+                if (stack.pop() !== "{") return false;
+                break;
+            case "]":
+                if (stack.pop() !== "[") return false;
+                break;
+        }
+    }
+
+    return stack.length === 0;
+};
+
+// Python
