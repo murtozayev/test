@@ -1,0 +1,57 @@
+// Java
+class Solution {
+    public int lengthOfLastWord(String s) {
+        if(s == "") {
+            return 0;
+        }
+
+        String trimmed = s.trim();
+        String[] strs = trimmed.split(" ");
+        Integer lastWord = strs[strs.length - 1].length();
+
+        return lastWord;
+    }
+}
+
+# Python
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        if s == "": return
+        return len(
+            s.strip()
+            .split(" ")
+            [-1]
+        )
+        
+
+// Javascript
+var lengthOfLastWord = function(s) {
+    if(s === "") return
+
+    let arr = s.trim().split(" ")
+    return arr[arr.length - 1].length
+};
+
+// Kotlin
+class Solution {
+    fun lengthOfLastWord(s: String): Int {
+        if(s == "") {
+            return 0
+        }
+
+        val list: List<String> = s.trim().split(" ")
+        return list[list.size - 1].length
+    }
+}
+
+// Go
+func lengthOfLastWord(s string) int {
+    if s == "" {
+        return 0
+    }
+
+    trimmed := strings.TrimSpace(s)
+    list := strings.Split(trimmed, " ")
+
+    return len(list[len(list) - 1])
+}

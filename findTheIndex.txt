@@ -1,0 +1,56 @@
+// Javascript
+var strStr = function(haystack, needle) {
+    if(haystack === "") return
+
+    let findStack = haystack.indexOf(needle)
+    
+    return findStack
+};
+
+# Python
+class Solution(object):
+    def strStr(self, haystack, needle):
+        if not haystack:
+            return
+
+        foundStack = haystack.find(needle)
+
+        return foundStack
+        
+
+// Kotlin
+class Solution {
+    fun strStr(haystack: String, needle: String): Int {
+        if(haystack == "") {
+            return -1
+        }
+
+        val foundStack = haystack.indexOf(needle)
+
+        return foundStack
+    }
+}
+
+// Go
+func strStr(haystack string, needle string) int {
+    if haystack == "" {
+        return -1
+    }
+
+    foundStack := strings.Index(haystack, needle)
+
+    return foundStack
+}
+
+// Java 
+class Solution {
+    public int strStr(String haystack, String needle) {
+        if(haystack == "") {
+            return -1;
+        }
+
+        Integer foundStack = haystack.indexOf(needle);
+
+        return foundStack;
+    }
+}
